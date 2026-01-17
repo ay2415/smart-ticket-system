@@ -1,0 +1,26 @@
+id,text,type,urgency,Sentiment
+1,My payment failed but money was deducted,Billing,High,Negative
+2,I was charged twice for my subscription,Billing,High,Negative
+3,Can I get an invoice for last month?,Billing,Low,Neutral
+4,The app crashes every time I open it,Technical,High,Negative
+5,Website is loading very slowly today,Technical,Medium,Negative
+6,I forgot my password and can�t log in,Account,Medium,Neutral
+7,Please help me reset my password,Account,Low,Neutral
+8,My account was locked without warning,Account,High,Negative
+9,How do I upgrade my current plan?,Billing,Low,Positive
+10,Feature X is not working as expected,Technical,Medium,Neutral
+11,"I love the app, but dark mode is missing",Feature Request,Low,Positive
+12,Can you add an export to CSV option?,Feature Request,Low,Neutral
+13,The latest update broke my workflow,Technical,High,Negative
+14,Refund hasn�t been processed yet,Billing,High,Negative
+15,I want to cancel my subscription,Billing,Medium,Neutral
+16,Customer support hasn�t replied in days,Support,High,Negative
+17,Thank you for the quick resolution!,Support,Low,Positive
+18,Notifications are not coming through,Technical,Medium,Negative
+19,Is there a mobile app available?,General,Low,Neutral
+20,My data seems to be missing,Account,High,Negative
+21,How do I change my email address?,Account,Low,Neutral
+22,The UI feels confusing on first use,UX,Low,Neutral
+23,"Amazing service, very happy overall",General,Low,Positive
+24,I was billed after canceling,Billing,High,Negative
+25,Trial ended earlier than expected,Billing,Medium,Negative
