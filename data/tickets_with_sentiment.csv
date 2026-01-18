@@ -1,0 +1,26 @@
+id,text,type,urgency,sentiment,clean_text
+1,My payment failed but money was deducted,Billing,High,Negative,payment fail money deduct
+2,I was charged twice for my subscription,Billing,High,Positive,charge twice subscription
+3,Can I get an invoice for last month?,Billing,Low,Negative,invoice month
+4,The app crashes every time I open it,Technical,High,Negative,app crash time open
+5,Website is loading very slowly today,Technical,Medium,Negative,website load slowly today
+6,I forgot my password and canÃ¯Â¿Â½t log in,Account,Medium,Negative,forget password not log
+7,Please help me reset my password,Account,Low,Negative,help reset password
+8,My account was locked without warning,Account,High,Negative,account lock warn
+9,How do I upgrade my current plan?,Billing,Low,Positive,upgrade current plan
+10,Feature X is not working as expected,Technical,Medium,Negative,feature x work expect
+11,"I love the app, but dark mode is missing",Feature Request,Low,Negative,love app dark mode miss
+12,Can you add an export to CSV option?,Feature Request,Low,Negative,add export csv option
+13,The latest update broke my workflow,Technical,High,Negative,late update break workflow
+14,Refund hasnÃ¯Â¿Â½t been processed yet,Billing,High,Negative,refund not process
+15,I want to cancel my subscription,Billing,Medium,Negative,want cancel subscription
+16,Customer support hasnÃ¯Â¿Â½t replied in days,Support,High,Negative,customer support not reply day
+17,Thank you for the quick resolution!,Support,Low,Positive,thank quick resolution
+18,Notifications are not coming through,Technical,Medium,Positive,notification come
+19,Is there a mobile app available?,General,Low,Positive,mobile app available
+20,My data seems to be missing,Account,High,Negative,data miss
+21,How do I change my email address?,Account,Low,Negative,change email address
+22,The UI feels confusing on first use,UX,Low,Negative,ui feel confusing use
+23,"Amazing service, very happy overall",General,Low,Positive,amazing service happy overall
+24,I was billed after canceling,Billing,High,Negative,bill cancel
+25,Trial ended earlier than expected,Billing,Medium,Positive,trial end early expect

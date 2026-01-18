@@ -1,4 +1,4 @@
-id,text,type,urgency,Sentiment,clean_text
+id,text,type,urgency,sentiment,clean_text
 1,My payment failed but money was deducted,Billing,High,Negative,payment fail money deduct
 2,I was charged twice for my subscription,Billing,High,Negative,charge twice subscription
 3,Can I get an invoice for last month?,Billing,Low,Neutral,invoice month
