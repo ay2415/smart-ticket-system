@@ -1,4 +1,5 @@
 import pandas as pd
+import joblib
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
@@ -25,6 +26,11 @@ X_train,X_test,y_train,y_test=train_test_split(X_vectorized,y,test_size=0.2,rand
 
 model =LogisticRegression(max_iter=1000)
 model.fit(X_train,y_train)
+
+joblib.dump(model, "../models/type_model.pkl")
+joblib.dump(vectorizer, "../models/tfidf_vectorizer.pkl")
+print("Ticket type model and TF-IDF vectorizer saved")
+
 
 y_pred =model.predict(X_test)
 
