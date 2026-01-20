@@ -8,30 +8,23 @@ from transformers import (
 )
 import torch
 
-# -----------------------------
-# 1. Load prepared dataset
-# -----------------------------
+
 df = pd.read_csv("../data/urgency_train_en.csv")
 
 print("Dataset size:", len(df))
 print(df["label"].value_counts())
 
-# Encode labels
 label_map = {"low": 0, "medium": 1, "high": 2}
 df["label"] = df["label"].map(label_map)
 
-# -----------------------------
-# 2. Train / Validation split
-# -----------------------------
+
 train_df = df.sample(frac=0.9, random_state=42)
 val_df = df.drop(train_df.index)
 
 train_ds = Dataset.from_pandas(train_df)
 val_ds = Dataset.from_pandas(val_df)
 
-# -----------------------------
-# 3. Tokenization
-# -----------------------------
+
 tokenizer = DistilBertTokenizerFast.from_pretrained(
     "distilbert-base-uncased"
 )
@@ -50,17 +43,12 @@ val_ds = val_ds.map(tokenize, batched=True)
 train_ds.set_format("torch", columns=["input_ids", "attention_mask", "label"])
 val_ds.set_format("torch", columns=["input_ids", "attention_mask", "label"])
 
-# -----------------------------
-# 4. Model
-# -----------------------------
+
 model = DistilBertForSequenceClassification.from_pretrained(
     "distilbert-base-uncased",
     num_labels=3
 )
 
-# -----------------------------
-# 5. Training configuration
-# -----------------------------
 training_args = TrainingArguments(
     output_dir="../models/urgency_transformer",
     learning_rate=2e-5,
@@ -72,10 +60,6 @@ training_args = TrainingArguments(
     save_total_limit=2
 )
 
-
-# -----------------------------
-# 6. Trainer
-# -----------------------------
 trainer = Trainer(
     model=model,
     args=training_args,
@@ -84,14 +68,9 @@ trainer = Trainer(
     tokenizer=tokenizer
 )
 
-# -----------------------------
-# 7. Train
-# -----------------------------
 trainer.train()
 
-# -----------------------------
-# 8. Save model
-# -----------------------------
+
 trainer.save_model("../models/urgency_transformer")
 tokenizer.save_pretrained("../models/urgency_transformer")
 
