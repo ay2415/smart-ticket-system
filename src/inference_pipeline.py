@@ -20,7 +20,7 @@ urgency_model.eval()
 def predict_urgency(text: str) -> str:
     inputs = urgency_tokenizer(
         text,
-        return_tensors="pt ",
+        return_tensors="pt",
         truncation=True,
         padding=True,
         max_length=256
