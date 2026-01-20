@@ -1,33 +1,26 @@
 import torch
 import random
-
 from transformers import (
     DistilBertTokenizerFast,
     DistilBertForSequenceClassification
 )
-
 from src.text_preprocessing import clean_text
-
-
 
 URGENCY_MODEL_PATH = "models/urgency_transformer"
 
 urgency_tokenizer = DistilBertTokenizerFast.from_pretrained(
     URGENCY_MODEL_PATH
 )
-
 urgency_model = DistilBertForSequenceClassification.from_pretrained(
     URGENCY_MODEL_PATH
 )
 
 urgency_model.eval()
 
-
-
 def predict_urgency(text: str) -> str:
     inputs = urgency_tokenizer(
         text,
-        return_tensors="pt",
+        return_tensors="pt ",
         truncation=True,
         padding=True,
         max_length=256
@@ -46,8 +39,6 @@ def predict_urgency(text: str) -> str:
     return id_to_label[prediction_id]
 
 
-
-
 def predict_sentiment(text: str) -> str:
     negative_words = ["fail", "error", "not working", "urgent", "crash", "issue"]
 
@@ -57,8 +48,6 @@ def predict_sentiment(text: str) -> str:
             return "Negative"
 
     return "Positive"
-
-
 
 
 URGENCY_SCORE = {
