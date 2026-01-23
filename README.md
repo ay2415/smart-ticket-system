@@ -49,7 +49,9 @@ README.md
 
 The urgency model was trained on a large IT support ticket dataset containing realistic customer issues. Only English tickets were used for training. Each ticket is labelled with an urgency level (Low, Medium, High), making the dataset suitable for supervised learning.
 
-Models used
+
+
+##### Models used
 
 
 
@@ -59,10 +61,14 @@ A fine-tuned DistilBERT model trained to classify tickets into Low, Medium, or H
 Sentiment analysis
 A transformer-based sentiment model used to determine whether the message is positive, neutral, or negative.
 
+
+
 Priority scoring
 A rule-based scoring approach that combines urgency, sentiment, and ticket age into a single numeric priority score.
 
-Model performance
+
+
+###### Model performance
 
 The urgency classification model was evaluated on a held-out test set. Overall accuracy is approximately 83 percent. Performance is strongest for high-urgency tickets, with precision and recall around 0.77. This is important in real-world support systems where missing critical issues is costly.
 
