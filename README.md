@@ -97,6 +97,7 @@ http://localhost:8501
 Paste a support ticket and click Analyze to view the predictions.
 
 ###### Example output
+Ticket: "The app is crashed".
 
 Urgency: High
 Sentiment: Negative
