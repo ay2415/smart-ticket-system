@@ -103,3 +103,7 @@ Urgency: High
 Sentiment: Negative
 Priority score: 14.8
 
+###### How to run this?
+streamlit run app.py
+
+
