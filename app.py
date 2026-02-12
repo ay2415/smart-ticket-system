@@ -11,6 +11,7 @@ st.set_page_config(
 )
 
 st.markdown(
+    """<h1 style='text-align:center;'>Smart Support Ticket Prioritization System</h1>""",
     unsafe_allow_html=True
 )
 st.divider()
@@ -30,12 +31,15 @@ if analyze:
         urgency =result["urgency"]
         sentiment= result["sentiment"]
         score=float(result["priority_score"])
+
         col1,col2,col3=st.columns(3)
 
         col1.metric("Urgency",urgency)
         col2.metric("Sentiment",sentiment)
         col3.metric("Priority Score",f"{score:.2f}")
+
         st.markdown("<br>",unsafe_allow_html=True)  
+
         normalized_score=min(max(score/15,0),1)
 
         st.progress(normalized_score)

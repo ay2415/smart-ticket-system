@@ -85,5 +85,3 @@ Priority score: 14.8
 ###### How to run this?
 
 streamlit run app.py
-
-> > > > > > > c2e2661ec0da675d6b9767ec9fda6c9c2ad265ac
