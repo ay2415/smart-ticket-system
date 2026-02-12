@@ -6,7 +6,7 @@ import streamlit as st
 from src.inference_pipeline import analyze_ticket
 
 st.set_page_config(
-    page_title="Smart Ticket Prioritization",
+    page_title="Smart Support Ticket Prioritization System",
     layout="centered"
 )
 
